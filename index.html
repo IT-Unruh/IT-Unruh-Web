@@ -538,6 +538,7 @@
       <li><a href="#ueber-mich">Über mich</a></li>
       <li><a href="#prozess">Vorgehen</a></li>
       <li><a href="#referenzen">Referenzen</a></li>
+      <li><a href="#fernwartung">Fernwartung</a></li>
       <li><a href="#kontakt" class="nav-cta">Kontakt aufnehmen</a></li>
     </ul>
     <button class="burger" id="burger" aria-label="Menü öffnen">
@@ -548,6 +549,7 @@
     <a href="#leistungen" class="mob-link">Leistungen</a>
     <a href="#ueber-mich" class="mob-link">Über mich</a>
     <a href="#prozess" class="mob-link">Vorgehen</a>
+    <a href="#fernwartung" class="mob-link">Fernwartung</a>
     <a href="#kontakt" class="mob-cta">Kontakt aufnehmen</a>
   </div>
 </nav>
@@ -1091,6 +1093,50 @@
         <p class="form-note">* Pflichtfelder. Ihre Daten werden nicht an Dritte weitergegeben.</p>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- FERNWARTUNG -->
+<style>
+  #fernwartung {
+    background: var(--navy);
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+  .fernwartung-inner { max-width: 640px; margin: 0 auto; }
+  .fernwartung-inner .section-label { color: rgba(201,151,58,0.85); }
+  .fernwartung-inner h2 {
+    font-family: var(--font-display); font-size: 2rem; font-weight: 700;
+    color: var(--white); margin: 0.5rem 0 1rem;
+  }
+  .fernwartung-inner p {
+    color: rgba(255,255,255,0.65); font-size: 1rem; line-height: 1.75;
+    margin-bottom: 2rem;
+  }
+  .btn-fernwartung {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    background: var(--gold); color: var(--navy);
+    font-weight: 700; font-size: 1rem;
+    padding: 0.85rem 2rem; border-radius: var(--radius);
+    text-decoration: none; transition: background 0.2s, transform 0.2s;
+  }
+  .btn-fernwartung:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .btn-fernwartung svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; }
+  .fernwartung-note {
+    margin-top: 1.25rem;
+    color: rgba(255,255,255,0.35); font-size: 0.82rem;
+  }
+</style>
+<section id="fernwartung">
+  <div class="fernwartung-inner">
+    <span class="section-label">Remote-Support</span>
+    <h2>Fernwartung</h2>
+    <p>Ich kann Ihren Computer sicher aus der Ferne warten und Probleme direkt lösen – ohne Wartezeit und ohne Anfahrt. Laden Sie dazu einfach das Fernwartungs-Tool herunter und teilen Sie mir die angezeigte ID mit.</p>
+    <a href="https://get.teamviewer.com/6zr6ua6" class="btn-fernwartung" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+      TeamViewer herunterladen
+    </a>
+    <p class="fernwartung-note">Das Tool startet nur auf Ihren Wunsch und gibt mir erst Zugriff, wenn Sie die Verbindung aktiv bestätigen.</p>
   </div>
 </section>
 
