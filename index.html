@@ -1,164 +1,1097 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IT-Consulting Unruh - Zukunft gemeinsam gestalten</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IT-Beratung & EDV-Support Weissach im Tal | IT-Unruh – Lennart Unruh</title>
+<meta name="description" content="IT-Beratung, EDV-Support und IT-Sicherheit für kleine Unternehmen in Weissach im Tal, Backnang & Umgebung. Langsame Computer, Datenverlust, Hackerangriffe – Lennart Unruh hilft. Jetzt kostenloses Erstgespräch vereinbaren.">
+<meta name="keywords" content="IT-Beratung Weissach im Tal, EDV-Betreuung Backnang, IT-Support Kleinunternehmen, Computerhilfe Rems-Murr-Kreis, IT-Sicherheit KMU, DSGVO Beratung, KI Automatisierung Kleinbetrieb, EDV-Service Backnang">
+<meta name="author" content="Lennart Unruh – IT-Unruh">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.it-unruh.de/">
+<!-- Open Graph für Google & Social -->
+<meta property="og:title" content="IT-Beratung & EDV-Support für Kleinunternehmen | IT-Unruh Weissach">
+<meta property="og:description" content="Persönliche IT-Beratung, EDV-Support und IT-Sicherheit für Handwerker, Einzelhändler und Dienstleister im Rems-Murr-Kreis. Kein Fachjargon, faire Preise.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:url" content="https://www.it-unruh.de/">
+<!-- Schema.org LocalBusiness für Google -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "IT-Unruh",
+  "description": "IT-Beratung, EDV-Support, IT-Sicherheit und KI-Automatisierung für kleine Unternehmen im Rems-Murr-Kreis.",
+  "url": "https://www.it-unruh.de",
+  "telephone": "+4915679704023",
+  "email": "mail@it-unruh.de",
+  "founder": { "@type": "Person", "name": "Lennart Unruh" },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Hügelstraße 16",
+    "addressLocality": "Weissach im Tal",
+    "postalCode": "71554",
+    "addressCountry": "DE"
+  },
+  "areaServed": ["Weissach im Tal", "Backnang", "Rems-Murr-Kreis", "Baden-Württemberg"],
+  "priceRange": "€€",
+  "openingHours": "Mo-Fr 08:00-18:00",
+  "serviceType": ["IT-Beratung", "EDV-Support", "IT-Sicherheit", "KI-Automatisierung", "Schulungen", "Self-Hosting"]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0f2744;
+    --navy-mid: #1a3a6b;
+    --navy-light: #2a527a;
+    --gold: #c9973a;
+    --gold-light: #e8b85a;
+    --cream: #f8f5ef;
+    --cream-dark: #ede8de;
+    --text-dark: #0f1f35;
+    --text-mid: #3a4a5c;
+    --text-light: #6a7d8f;
+    --white: #ffffff;
+    --border: rgba(15, 39, 68, 0.12);
+    --shadow-sm: 0 2px 8px rgba(15, 39, 68, 0.08);
+    --shadow-md: 0 8px 32px rgba(15, 39, 68, 0.12);
+    --shadow-lg: 0 20px 60px rgba(15, 39, 68, 0.16);
+    --radius: 4px;
+    --radius-md: 8px;
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'Source Sans 3', system-ui, sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    background: var(--cream);
+    line-height: 1.7;
+    font-size: 17px;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(15, 39, 68, 0.97);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(201, 151, 58, 0.25);
+  }
+  .nav-inner {
+    max-width: 1140px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 2rem; height: 68px;
+  }
+  .nav-logo {
+    font-family: var(--font-display);
+    font-size: 1.45rem; font-weight: 700;
+    color: var(--white); text-decoration: none;
+    letter-spacing: 0.01em;
+  }
+  .nav-logo span { color: var(--gold); }
+  .nav-links {
+    display: flex; align-items: center; gap: 2rem;
+    list-style: none;
+  }
+  .nav-links a {
+    color: rgba(255,255,255,0.82);
+    text-decoration: none; font-size: 0.95rem;
+    font-weight: 400; letter-spacing: 0.02em;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--gold-light); }
+  .nav-cta {
+    background: var(--gold);
+    color: var(--navy) !important;
+    font-weight: 600 !important;
+    padding: 0.5rem 1.25rem;
+    border-radius: var(--radius);
+    transition: background 0.2s !important;
+  }
+  .nav-cta:hover { background: var(--gold-light) !important; }
+
+  .burger {
+    display: none;
+    flex-direction: column; gap: 5px; cursor: pointer;
+    background: none; border: none; padding: 4px;
+  }
+  .burger span {
+    display: block; width: 24px; height: 2px;
+    background: var(--white); border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  .burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .burger.open span:nth-child(2) { opacity: 0; }
+  .burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    background: rgba(15, 39, 68, 0.98);
+    padding: 1.5rem 2rem 2rem;
+    border-top: 1px solid rgba(201, 151, 58, 0.2);
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    color: rgba(255,255,255,0.85);
+    text-decoration: none; font-size: 1.05rem;
+    padding: 0.7rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .mobile-menu a:last-child { border-bottom: none; }
+  .mobile-menu .mob-cta {
+    margin-top: 1rem; background: var(--gold);
+    color: var(--navy) !important; font-weight: 600;
+    text-align: center; padding: 0.9rem;
+    border-radius: var(--radius); border-bottom: none !important;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: linear-gradient(150deg, var(--navy) 0%, var(--navy-mid) 55%, #1e4a70 100%);
+    display: flex; align-items: center;
+    padding: 100px 2rem 5rem;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image: radial-gradient(circle at 70% 30%, rgba(201,151,58,0.08) 0%, transparent 60%),
+                      radial-gradient(circle at 20% 80%, rgba(255,255,255,0.03) 0%, transparent 50%);
+  }
+  .hero-grid {
+    position: absolute; inset: 0; opacity: 0.04;
+    background-image: linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .hero-inner {
+    max-width: 1140px; margin: 0 auto; position: relative;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+  }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: rgba(201,151,58,0.15); border: 1px solid rgba(201,151,58,0.35);
+    color: var(--gold-light); font-size: 0.82rem; letter-spacing: 0.08em;
+    text-transform: uppercase; padding: 0.4rem 1rem; border-radius: 20px;
+    margin-bottom: 1.5rem;
+  }
+  .hero-badge::before {
+    content: ''; display: block; width: 6px; height: 6px;
+    background: var(--gold); border-radius: 50%;
+  }
+  .hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+    font-weight: 700; color: var(--white);
+    line-height: 1.2; margin-bottom: 1.5rem;
+  }
+  .hero h1 em {
+    font-style: normal; color: var(--gold);
+    border-bottom: 2px solid rgba(201,151,58,0.4);
+  }
+  .hero-sub {
+    color: rgba(255,255,255,0.72); font-size: 1.1rem;
+    font-weight: 300; margin-bottom: 2.5rem; max-width: 480px;
+  }
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--gold); color: var(--navy);
+    font-weight: 600; font-size: 1rem;
+    padding: 0.85rem 2rem; border-radius: var(--radius);
+    text-decoration: none; transition: background 0.2s, transform 0.2s;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+  .btn-ghost {
+    border: 1px solid rgba(255,255,255,0.35); color: var(--white);
+    font-weight: 400; font-size: 1rem;
+    padding: 0.85rem 2rem; border-radius: var(--radius);
+    text-decoration: none; transition: border-color 0.2s, background 0.2s;
+    display: inline-block;
+  }
+  .btn-ghost:hover { border-color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.06); }
+
+  .hero-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--radius-md);
+    padding: 2rem;
+    backdrop-filter: blur(8px);
+  }
+  .hero-stats {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem;
+  }
+  .stat-item { text-align: center; }
+  .stat-num {
+    font-family: var(--font-display); font-size: 2.5rem; font-weight: 700;
+    color: var(--gold); line-height: 1;
+  }
+  .stat-label { color: rgba(255,255,255,0.6); font-size: 0.85rem; margin-top: 0.3rem; }
+  .hero-trust {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 1.5rem;
+    display: flex; flex-direction: column; gap: 0.8rem;
+  }
+  .trust-item {
+    display: flex; align-items: center; gap: 0.75rem;
+    color: rgba(255,255,255,0.75); font-size: 0.9rem;
+  }
+  .trust-icon {
+    width: 32px; height: 32px; border-radius: 50%;
+    background: rgba(201,151,58,0.15);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .trust-icon svg { width: 16px; height: 16px; stroke: var(--gold); fill: none; stroke-width: 2; }
+
+  /* ── SECTIONS ── */
+  section { padding: 5rem 2rem; }
+  .container { max-width: 1140px; margin: 0 auto; }
+  .section-label {
+    display: inline-block; font-size: 0.78rem; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 0.75rem;
+  }
+  .section-title {
+    font-family: var(--font-display); font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 700; color: var(--navy); line-height: 1.25;
+    margin-bottom: 1rem;
+  }
+  .section-intro {
+    color: var(--text-mid); font-size: 1.05rem; max-width: 580px; margin-bottom: 3.5rem;
+  }
+
+  /* ── SERVICES ── */
+  #leistungen { background: var(--white); }
+  .services-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+  .service-card {
+    border: 1px solid var(--border); border-radius: var(--radius-md);
+    padding: 2rem 1.75rem;
+    transition: box-shadow 0.25s, transform 0.25s, border-color 0.25s;
+    background: var(--white); position: relative; overflow: hidden;
+  }
+  .service-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: var(--gold); transform: scaleX(0); transform-origin: left;
+    transition: transform 0.3s;
+  }
+  .service-card:hover {
+    box-shadow: var(--shadow-md); transform: translateY(-3px);
+    border-color: rgba(201,151,58,0.3);
+  }
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-icon {
+    width: 48px; height: 48px; border-radius: var(--radius);
+    background: rgba(15,39,68,0.06);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1.25rem;
+  }
+  .service-icon svg { width: 24px; height: 24px; stroke: var(--navy); fill: none; stroke-width: 1.5; }
+  .service-card h3 {
+    font-family: var(--font-display); font-size: 1.2rem; font-weight: 600;
+    color: var(--navy); margin-bottom: 0.75rem;
+  }
+  .service-card p { color: var(--text-mid); font-size: 0.95rem; line-height: 1.65; }
+  .service-link {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    color: var(--gold); font-size: 0.9rem; font-weight: 600;
+    text-decoration: none; margin-top: 1.25rem;
+    transition: gap 0.2s;
+  }
+  .service-link:hover { gap: 0.6rem; }
+
+
+  /* ── ABOUT PHOTO ── */
+  .about-photo-wrap { position: relative; }
+  .about-photo-placeholder {
+    width: 75%; max-width: 280px; aspect-ratio: 3/4; margin: 0 auto;
+    border-radius: var(--radius-md); overflow: hidden;
+    background: var(--navy); position: relative;
+    border: 3px solid rgba(201,151,58,0.3);
+  }
+  .about-photo-img {
+    width: 100%; height: 100%; object-fit: cover; object-position: top center;
+    display: block;
+  }
+  .photo-upload-hint {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    gap: 0.75rem; padding: 2rem; text-align: center;
+    color: rgba(255,255,255,0.55);
+  }
+  .photo-upload-hint span { font-size: 1rem; font-weight: 600; color: rgba(255,255,255,0.8); }
+  .photo-upload-hint small { font-size: 0.8rem; line-height: 1.5; color: rgba(255,255,255,0.45); }
+  .photo-upload-hint strong { color: var(--gold-light); }
+
+  /* ── ABOUT ── */
+  #ueber-mich { background: var(--cream); }
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+  }
+  .about-visual {
+    position: relative;
+  }
+  .about-card-main {
+    background: var(--navy); color: var(--white);
+    border-radius: var(--radius-md); padding: 2.5rem;
+    position: relative; overflow: hidden;
+  }
+  .about-card-main::after {
+    content: ''; position: absolute; bottom: -40px; right: -40px;
+    width: 160px; height: 160px; border-radius: 50%;
+    background: rgba(201,151,58,0.1);
+  }
+  .about-name {
+    font-family: var(--font-display); font-size: 1.5rem; font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+  .about-title { color: var(--gold-light); font-size: 0.9rem; margin-bottom: 1.5rem; }
+  .about-card-main p { color: rgba(255,255,255,0.78); font-size: 0.95rem; line-height: 1.7; }
+  .about-card-accent {
+    background: var(--gold); border-radius: var(--radius-md);
+    padding: 1.25rem 1.5rem;
+    margin-top: -1.5rem; margin-left: 2rem; position: relative; z-index: 2;
+    box-shadow: var(--shadow-md);
+  }
+  .about-card-accent p { color: var(--navy); font-weight: 600; font-size: 0.95rem; }
+  .about-card-accent span { font-size: 1.8rem; font-weight: 700; font-family: var(--font-display); }
+
+  .about-text p { color: var(--text-mid); margin-bottom: 1.25rem; }
+  .about-values {
+    display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem;
+  }
+  .value-item {
+    display: flex; align-items: flex-start; gap: 1rem;
+    background: var(--white); border-radius: var(--radius-md);
+    padding: 1rem 1.25rem; border: 1px solid var(--border);
+  }
+  .value-dot {
+    width: 8px; height: 8px; border-radius: 50%; background: var(--gold);
+    flex-shrink: 0; margin-top: 0.5rem;
+  }
+  .value-item strong { color: var(--navy); font-size: 0.95rem; display: block; margin-bottom: 0.2rem; }
+  .value-item p { color: var(--text-mid); font-size: 0.88rem; margin: 0; line-height: 1.55; }
+
+  /* ── PROCESS ── */
+  #prozess { background: var(--navy); }
+  #prozess .section-title { color: var(--white); }
+  #prozess .section-label { color: var(--gold-light); }
+  #prozess .section-intro { color: rgba(255,255,255,0.65); }
+  .process-steps {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;
+    position: relative;
+  }
+  .process-step {
+    position: relative; text-align: center; padding: 2rem 1.25rem;
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+    border-radius: var(--radius-md);
+  }
+  .step-num {
+    font-family: var(--font-display); font-size: 3rem; font-weight: 700;
+    color: rgba(201,151,58,0.2); line-height: 1; margin-bottom: 1rem;
+  }
+  .step-icon {
+    width: 48px; height: 48px; margin: 0 auto 1.25rem;
+    background: rgba(201,151,58,0.12); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .step-icon svg { width: 22px; height: 22px; stroke: var(--gold); fill: none; stroke-width: 1.5; }
+  .process-step h3 {
+    font-family: var(--font-display); font-size: 1.05rem; font-weight: 600;
+    color: var(--white); margin-bottom: 0.75rem;
+  }
+  .process-step p { color: rgba(255,255,255,0.58); font-size: 0.88rem; line-height: 1.65; }
+
+  /* ── CONTACT ── */
+  #kontakt { background: var(--white); }
+  .contact-grid {
+    display: grid; grid-template-columns: 1fr 1.4fr; gap: 4rem; align-items: start;
+  }
+  .contact-info h3 {
+    font-family: var(--font-display); font-size: 1.5rem; font-weight: 700;
+    color: var(--navy); margin-bottom: 1rem;
+  }
+  .contact-info p { color: var(--text-mid); margin-bottom: 2rem; }
+  .contact-details { display: flex; flex-direction: column; gap: 1.25rem; }
+  .contact-item {
+    display: flex; align-items: flex-start; gap: 1rem;
+  }
+  .contact-item-icon {
+    width: 40px; height: 40px; background: rgba(15,39,68,0.06);
+    border-radius: var(--radius); display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .contact-item-icon svg { width: 18px; height: 18px; stroke: var(--navy); fill: none; stroke-width: 1.5; }
+  .contact-item strong { color: var(--navy); font-size: 0.85rem; display: block; margin-bottom: 0.15rem; }
+  .contact-item a, .contact-item span { color: var(--text-mid); font-size: 0.95rem; text-decoration: none; }
+  .contact-item a:hover { color: var(--navy); }
+
+  /* Form */
+  .contact-form {
+    background: var(--cream); border-radius: var(--radius-md);
+    padding: 2.5rem; border: 1px solid var(--border);
+  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+  .form-group { margin-bottom: 1rem; }
+  .form-group label {
+    display: block; font-size: 0.85rem; font-weight: 600;
+    color: var(--navy); margin-bottom: 0.4rem; letter-spacing: 0.01em;
+  }
+  .form-group input, .form-group select, .form-group textarea {
+    width: 100%; padding: 0.75rem 1rem;
+    border: 1px solid var(--border); border-radius: var(--radius);
+    background: var(--white); color: var(--text-dark);
+    font-family: var(--font-body); font-size: 0.95rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none; appearance: none;
+  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    border-color: var(--navy-light);
+    box-shadow: 0 0 0 3px rgba(42, 82, 122, 0.12);
+  }
+  .form-group textarea { resize: vertical; min-height: 120px; }
+  .form-group select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' stroke='%233a4a5c' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 1rem center;
+    padding-right: 2.5rem;
+  }
+  .form-submit {
+    width: 100%; background: var(--navy); color: var(--white);
+    border: none; border-radius: var(--radius); padding: 1rem;
+    font-family: var(--font-body); font-size: 1rem; font-weight: 600;
+    cursor: pointer; transition: background 0.2s, transform 0.15s;
+    margin-top: 0.5rem;
+  }
+  .form-submit:hover { background: var(--navy-mid); transform: translateY(-1px); }
+  .form-submit:active { transform: translateY(0); }
+  .form-note {
+    text-align: center; color: var(--text-light); font-size: 0.82rem; margin-top: 1rem;
+  }
+  .success-msg {
+    display: none; background: #f0faf4; border: 1px solid #a3d9b5;
+    border-radius: var(--radius); padding: 1rem 1.25rem;
+    color: #1a6b3a; font-size: 0.95rem; margin-bottom: 1rem; text-align: center;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--text-dark); color: rgba(255,255,255,0.55);
+    padding: 2.5rem 2rem; font-size: 0.88rem;
+  }
+  .footer-inner {
+    max-width: 1140px; margin: 0 auto;
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+  }
+  .footer-inner a {
+    color: rgba(255,255,255,0.55); text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-inner a:hover { color: var(--gold-light); }
+  .footer-links { display: flex; gap: 1.5rem; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .nav-links { display: none; }
+    .burger { display: flex; }
+    .hero-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    .hero-card { display: none; }
+    .about-grid { grid-template-columns: 1fr; }
+    .about-visual { order: -1; }
+    .about-card-accent { margin-left: 0; }
+    .process-steps { grid-template-columns: 1fr 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 560px) {
+    section { padding: 3.5rem 1.25rem; }
+    .nav-inner { padding: 0 1.25rem; }
+    .hero { padding: 90px 1.25rem 3.5rem; }
+    .process-steps { grid-template-columns: 1fr; }
+    .hero-actions { flex-direction: column; }
+    .btn-primary, .btn-ghost { text-align: center; }
+  }
+</style>
 </head>
 <body>
-    <!-- Header / Hero Section -->
-    <header id="home">
-        <div class="container">
-            <nav>
-                <div class="logo">
-                    <h1>IT-Consulting Unruh</h1>
-                </div>
-                <div class="nav-links">
-                    <a href="#home">Home</a>
-                    <a href="#about">Über uns</a>
-                    <a href="#services">Leistungen</a>
-                    <a href="#contact">Kontakt</a>
-                </div>
-                <div class="menu-toggle">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </nav>
-            <div class="hero-content">
-                <h2>Zukunft gemeinsam gestalten</h2>
-                <h3>IT & KI-Beratung auf Augenhöhe</h3>
-                <a href="#contact" class="btn cta-btn">Jetzt Kontakt aufnehmen</a>
-            </div>
-        </div>
-    </header>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <h2 class="section-title">Über uns</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>Unsere Mission</h3>
-                    <p>Bei IT-Consulting Unruh bieten wir persönliche und unabhängige Beratung mit einem klaren Fokus auf Zukunftstechnologien. Wir glauben daran, dass die besten IT- und KI-Lösungen nicht immer dem Mainstream folgen müssen.</p>
-                    <p>Unser Ziel ist es, Ihr Unternehmen mit maßgeschneiderten Strategien zu unterstützen, die Ihre individuellen Anforderungen erfüllen und Ihnen einen echten Wettbewerbsvorteil verschaffen.</p>
-                </div>
-                <div class="about-image">
-                    <img src="images/about-image.jpg" alt="IT-Consulting Unruh Team">
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">IT-<span>Unruh</span></a>
+    <ul class="nav-links">
+      <li><a href="#leistungen">Leistungen</a></li>
+      <li><a href="#ueber-mich">Über mich</a></li>
+      <li><a href="#prozess">Vorgehen</a></li>
+      <li><a href="#kontakt" class="nav-cta">Kontakt aufnehmen</a></li>
+    </ul>
+    <button class="burger" id="burger" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#leistungen" class="mob-link">Leistungen</a>
+    <a href="#ueber-mich" class="mob-link">Über mich</a>
+    <a href="#prozess" class="mob-link">Vorgehen</a>
+    <a href="#kontakt" class="mob-cta">Kontakt aufnehmen</a>
+  </div>
+</nav>
 
-    <!-- Services Section -->
-    <section id="services" class="services-section">
-        <div class="container">
-            <h2 class="section-title">Unsere Leistungen</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <h3>IT-Beratung</h3>
-                    <p>Umfassende Beratung zu Digitalisierung, Infrastruktur und Sicherheit. Wir analysieren Ihre bestehenden Systeme und entwickeln zukunftssichere Lösungen.</p>
-                    <a href="it-beratung.html" class="service-link">Mehr erfahren <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>KI-Strategieberatung</h3>
-                    <p>Integration von KI in Ihre Geschäftsprozesse, Entwicklung von Chatbots, RAG-Systemen und Automatisierungslösungen für mehr Effizienz.</p>
-                    <a href="ki-strategieberatung.html" class="service-link">Mehr erfahren <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-server"></i>
-                    </div>
-                    <h3>Self-Hosting-Lösungen</h3>
-                    <p>Entwicklung individueller Self-Hosting-Lösungen, die Ihnen volle Kontrolle über Ihre Daten und Anwendungen geben.</p>
-                    <a href="self-hosting-loesungen.html" class="service-link">Mehr erfahren <i class="fas fa-arrow-right"></i></a>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-chalkboard-teacher"></i>
-                    </div>
-                    <h3>Schulungen & Workshops</h3>
-                    <p>Maßgeschneiderte Schulungen und Workshops zu IT- und KI-Themen, um Ihr Team fit für die digitale Zukunft zu machen.</p>
-                    <a href="schulungen-workshops.html" class="service-link">Mehr erfahren <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge">IT-Beratung & EDV-Support · Weissach im Tal & Backnang</div>
+      <h1>IT-Probleme gelöst – <em>persönlich vor Ort</em></h1>
+      <p class="hero-sub">EDV-Support, IT-Sicherheit und Digitalisierung für kleine Unternehmen im Rems-Murr-Kreis. Kein Fachjargon, kein Callcenter – Lennart Unruh kommt zu Ihnen.</p>
+      <div class="hero-actions">
+        <a href="#kontakt" class="btn-primary">Kostenloses Erstgespräch</a>
+        <a href="#leistungen" class="btn-ghost">Leistungen ansehen</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num">10+</div>
+          <div class="stat-label">Jahre Erfahrung</div>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2 class="section-title">Kontakt</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Nehmen Sie Kontakt auf</h3>
-                    <p>Wir freuen uns darauf, von Ihnen zu hören und gemeinsam Ihre IT- und KI-Herausforderungen zu meistern.</p>
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <a href="mailto:mail@it-unruh.de">mail@it-unruh.de</a>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <span>+49 (0) 176 4279 4451</span>
-                        </div>
-                    </div>
- <!--                   <div class="social-links">
-                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-xing"></i></a>
-                   </div>
-               </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">E-Mail</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Nachricht</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" class="btn submit-btn">Nachricht senden</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-           <div class="appointment">
-                <h3>Termin vereinbaren</h3>
-                <p>Vereinbaren Sie einen Termin für ein unverbindliches Erstgespräch.</p>
-                <a href="#" class="btn appointment-btn">Termin buchen</a>
-            </div>
+        <div class="stat-item">
+          <div class="stat-num">50+</div>
+          <div class="stat-label">Projekte</div>
         </div>
-  -->     </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-links">
-                    <a href="impressum.html">Impressum</a>
-<!--                <a href="#">Datenschutz</a> -->
-                </div>
-                <div class="footer-copyright">
-                    <p>&copy; 2025 IT-Consulting Unruh. Alle Rechte vorbehalten.</p>
-                    <p class="made-with">Made with <i class="fas fa-heart"></i> & <i class="fas fa-brain"></i> in Deutschland</p>
-                </div>
-            </div>
+        <div class="stat-item">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Persönlich</div>
         </div>
-    </footer>
+        <div class="stat-item">
+          <div class="stat-num">5</div>
+          <div class="stat-label">Leistungsbereiche</div>
+        </div>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          Keine Stundensätze versteckt – transparente Preise
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+          </div>
+          Datenschutz & DSGVO-konforme Lösungen
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">
+            <svg viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          </div>
+          Erreichbar – auch nach Projektabschluss
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <script src="js/script.js"></script>
+<!-- LEISTUNGEN -->
+<style>
+  .services-grid-new {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.75rem;
+  }
+  .service-card-new {
+    border: 1px solid var(--border); border-radius: var(--radius-md);
+    background: var(--white); overflow: hidden;
+    transition: box-shadow 0.25s, transform 0.25s;
+    display: flex; flex-direction: column;
+  }
+  .service-card-new:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+  .service-card-head {
+    background: var(--navy); padding: 1.75rem 1.75rem 1.5rem;
+    position: relative; overflow: hidden;
+  }
+  .service-card-head::after {
+    content: ''; position: absolute; bottom: -30px; right: -20px;
+    width: 100px; height: 100px; border-radius: 50%;
+    background: rgba(201,151,58,0.12);
+  }
+  .service-card-head .svc-icon {
+    width: 44px; height: 44px; border-radius: var(--radius);
+    background: rgba(201,151,58,0.15);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1rem;
+  }
+  .service-card-head .svc-icon svg { width: 22px; height: 22px; stroke: var(--gold-light); fill: none; stroke-width: 1.5; }
+  .service-card-head h3 {
+    font-family: var(--font-display); font-size: 1.15rem; font-weight: 700;
+    color: var(--white); margin-bottom: 0.3rem;
+  }
+  .service-card-head .svc-problem {
+    color: rgba(255,255,255,0.55); font-size: 0.82rem; font-style: italic;
+    line-height: 1.5;
+  }
+  .service-card-body { padding: 1.5rem 1.75rem; flex: 1; display: flex; flex-direction: column; }
+  .service-card-body p {
+    color: var(--text-mid); font-size: 0.93rem; line-height: 1.65;
+    margin-bottom: 1.25rem;
+  }
+  .svc-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 1.5rem; }
+  .svc-bullets li {
+    display: flex; align-items: flex-start; gap: 0.65rem;
+    color: var(--text-dark); font-size: 0.88rem; line-height: 1.5;
+  }
+  .svc-bullets li::before {
+    content: ''; display: block; width: 6px; height: 6px;
+    border-radius: 50%; background: var(--gold);
+    flex-shrink: 0; margin-top: 0.45rem;
+  }
+  .svc-result {
+    background: rgba(15,39,68,0.04); border-left: 3px solid var(--gold);
+    border-radius: 0 var(--radius) var(--radius) 0;
+    padding: 0.75rem 1rem; margin-bottom: 1.5rem;
+    color: var(--navy); font-size: 0.88rem; font-weight: 600; line-height: 1.5;
+  }
+  .service-card-new .service-link {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    color: var(--gold); font-size: 0.9rem; font-weight: 600;
+    text-decoration: none; margin-top: auto;
+    transition: gap 0.2s;
+  }
+  .service-card-new .service-link:hover { gap: 0.65rem; }
+</style>
+
+<section id="leistungen">
+  <div class="container">
+    <span class="section-label">EDV-Betreuung & IT-Service</span>
+    <h2 class="section-title">Konkrete Hilfe – kein IT-Kauderwelsch</h2>
+    <p class="section-intro">Ob der Computer schon morgens streikt, Daten verloren gehen oder ein Hackerangriff droht – als IT-Berater im Rems-Murr-Kreis sorge ich dafür, dass Ihr Betrieb reibungslos läuft.</p>
+    <div class="services-grid-new">
+
+      <!-- Karte 1 -->
+      <div class="service-card-new">
+        <div class="service-card-head">
+          <div class="svc-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+          </div>
+          <h3>IT-Beratung & Technik-Check</h3>
+          <div class="svc-problem">„Unsere Computer sind uralt, alles dauert ewig und niemand weiß, wer eigentlich zuständig ist."</div>
+        </div>
+        <div class="service-card-body">
+          <p>Ich schaue mir Ihre gesamte IT an – von den Geräten über die Internetverbindung bis zu den Programmen, die Sie täglich nutzen. Dann bekommt jeder im Betrieb eine klare Ansage: Was muss sofort weg, was kann warten, was kostet Sie unnötig Geld?</p>
+          <ul class="svc-bullets">
+            <li>Alle Geräte & Programme unter die Lupe nehmen</li>
+            <li>Langsame oder fehleranfällige Technik ersetzen</li>
+            <li>Klarheit, wer bei Problemen Ansprechpartner ist</li>
+            <li>Sicherheitslücken schließen (Updates, Passwörter, Backups)</li>
+            <li>Günstigere Alternativen zu teuren Lizenzen finden</li>
+          </ul>
+          <div class="svc-result">Ergebnis: Ihre Technik läuft zuverlässig – Sie können sich auf Ihr Geschäft konzentrieren, nicht auf Technikprobleme.</div>
+          <a href="#kontakt" class="service-link">Kostenloses Erstgespräch →</a>
+        </div>
+      </div>
+
+      <!-- Karte 2 -->
+      <div class="service-card-new">
+        <div class="service-card-head">
+          <div class="svc-icon">
+            <svg viewBox="0 0 24 24"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+          </div>
+          <h3>KI & Automatisierung im Alltag</h3>
+          <div class="svc-problem">„Meine Mitarbeiter tippen täglich dieselben Dinge ab, schreiben immer wieder ähnliche E-Mails und verlieren Stunden mit Kleinkram."</div>
+        </div>
+        <div class="service-card-body">
+          <p>Künstliche Intelligenz ist kein Zukunftsthema – sie ist heute schon in jedem Betrieb einsetzbar. Ich zeige Ihnen, welche Routinen sich sofort automatisieren lassen und welche KI-Tools konkret zu Ihrem Betrieb passen. Kein Hype, nur echter Nutzen.</p>
+          <ul class="svc-bullets">
+            <li>Angebote, Rechnungen & E-Mails automatisch erstellen lassen</li>
+            <li>Kundennachrichten schneller beantworten mit KI-Unterstützung</li>
+            <li>Terminverwaltung & Erinnerungen automatisieren</li>
+            <li>Wiederkehrende Berichte & Listen per Knopfdruck erzeugen</li>
+            <li>Einführung ohne IT-Vorkenntnisse – Schritt für Schritt</li>
+          </ul>
+          <div class="svc-result">Ergebnis: Bis zu mehrere Stunden Zeitersparnis pro Woche – bei gleichbleibender oder besserer Qualität.</div>
+          <a href="#kontakt" class="service-link">Kostenloses Erstgespräch →</a>
+        </div>
+      </div>
+
+      <!-- Karte 3 -->
+      <div class="service-card-new">
+        <div class="service-card-head">
+          <div class="svc-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+          </div>
+          <h3>Schulungen für Ihr Team</h3>
+          <div class="svc-problem">„Neue Software wird eingeführt, aber niemand weiß richtig, wie man sie bedient – und mich fragt auch keiner."</div>
+        </div>
+        <div class="service-card-body">
+          <p>Ich schule Ihre Mitarbeiter praxisnah – direkt an ihrem Arbeitsplatz oder in kleinen Gruppen. Kein Frontalunterricht, keine PowerPoint-Schlachten. Jeder lernt genau das, was er in seinem Alltag braucht. Danach gibt es eine verständliche Kurzanleitung zum Nachschlagen.</p>
+          <ul class="svc-bullets">
+            <li>Einführung in neue Programme (z. B. Office, Buchhaltung, CRM)</li>
+            <li>Sichere Nutzung von E-Mail & Internet (Phishing erkennen)</li>
+            <li>KI-Tools richtig einsetzen – ohne Datenschutzrisiken</li>
+            <li>Smartphone & Laptop optimal fürs Geschäft nutzen</li>
+            <li>Individuelle Kurzanleitungen für Ihr Team</li>
+          </ul>
+          <div class="svc-result">Ergebnis: Ihr Team arbeitet sicherer, schneller und selbstständiger – ohne dass Sie bei jedem Problem eingreifen müssen.</div>
+          <a href="#kontakt" class="service-link">Kostenloses Erstgespräch →</a>
+        </div>
+      </div>
+
+      <!-- Karte 4 -->
+      <div class="service-card-new">
+        <div class="service-card-head">
+          <div class="svc-icon">
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/></svg>
+          </div>
+          <h3>Eigene Server & Datensicherheit</h3>
+          <div class="svc-problem">„Alle unsere Daten liegen bei Google oder Microsoft – ich weiß nicht genau, wer darauf Zugriff hat und was das DSGVO-mäßig bedeutet."</div>
+        </div>
+        <div class="service-card-body">
+          <p>Wer sensible Kunden- oder Geschäftsdaten verwaltet, sollte wissen, wo diese liegen. Ich richte eigene Lösungen ein, die Dropbox, Google Drive oder teure Microsoft-365-Lizenzen ersetzen – auf Ihrem eigenen Server, vollständig unter Ihrer Kontrolle.</p>
+          <ul class="svc-bullets">
+            <li>Eigene Dateiablage statt Dropbox oder Google Drive</li>
+            <li>E-Mail-Server, der nicht von US-Konzernen gelesen werden kann</li>
+            <li>Automatische tägliche Datensicherung (Backup)</li>
+            <li>DSGVO-konforme Speicherung von Kundendaten</li>
+            <li>Kein monatlicher Abo-Wahnsinn – einmal einrichten, dauerhaft nutzen</li>
+          </ul>
+          <div class="svc-result">Ergebnis: Ihre Daten gehören Ihnen – sicher, günstig und ohne Abhängigkeit von großen Anbietern.</div>
+          <a href="#kontakt" class="service-link">Kostenloses Erstgespräch →</a>
+        </div>
+      </div>
+
+      <!-- Karte 5: IT-Sicherheit -->
+      <div class="service-card-new" style="border-color: rgba(201,151,58,0.4);">
+        <div class="service-card-head" style="background: linear-gradient(135deg, #0f2744 60%, #1a3a6b);">
+          <div class="svc-icon" style="background: rgba(201,151,58,0.25);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#e8b85a" stroke-width="1.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <div style="display:inline-block; background: rgba(201,151,58,0.2); border: 1px solid rgba(201,151,58,0.5); color: #e8b85a; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 0.2rem 0.6rem; border-radius: 20px; margin-bottom: 0.5rem;">Meistgesucht</div>
+          <h3>IT-Sicherheit & Datenschutz</h3>
+          <div class="svc-problem">„Wir hatten mal einen Virenbefall und alles war weg. Oder ein Mitarbeiter hat auf einen falschen Link geklickt – und plötzlich war das ganze Netzwerk gesperrt."</div>
+        </div>
+        <div class="service-card-body">
+          <p>Laut BSI sind kleine Unternehmen das häufigste Ziel von Cyberangriffen – gerade weil dort der Schutz oft lückenhaft ist. Ich prüfe Ihre IT auf Schwachstellen und schließe diese, bevor es zum Ernstfall kommt. Kein Panikverkauf, keine überteuerten Abos – nur das, was Sie wirklich brauchen.</p>
+          <ul class="svc-bullets">
+            <li>Sicherheits-Check: Wo sind Ihre größten Risiken?</li>
+            <li>Schutz vor Phishing, Viren & Ransomware (Erpressungssoftware)</li>
+            <li>Automatische Datensicherung – täglich, zuverlässig, wiederherstellbar</li>
+            <li>Sichere Passwörter & Zwei-Faktor-Anmeldung einrichten</li>
+            <li>DSGVO-Beratung: Was müssen Sie als Betrieb wirklich beachten?</li>
+          </ul>
+          <div class="svc-result">Ergebnis: Ihr Betrieb ist geschützt – und Sie schlafen nachts ruhiger, weil Sie wissen, dass Ihre Daten sicher sind.</div>
+          <a href="#kontakt" class="service-link">Kostenloses Erstgespräch →</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ÜBER MICH -->
+<section id="ueber-mich">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual">
+        <div class="about-photo-wrap">
+          <div class="about-photo-placeholder" id="photo-area">
+            <div class="photo-upload-hint">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="40" height="40"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <span>Ihr Foto</span>
+              <small>Bild mit dem Dateinamen <strong>foto-lennart.jpg</strong> in denselben Ordner wie die index.html legen</small>
+            </div>
+            <img src="foto-lennart.jpg" alt="Lennart Unruh – IT-Unruh" class="about-photo-img" onerror="this.style.display='none';document.querySelector('.photo-upload-hint').style.display='flex'">
+          </div>
+        </div>
+        <div class="about-card-accent" style="margin-top:1.25rem;">
+          <span>100%</span>
+          <p>unabhängige Beratung – kein Vendor-Lock-in, keine versteckten Interessen</p>
+        </div>
+      </div>
+      <div class="about-text">
+        <span class="section-label">Über mich</span>
+        <h2 class="section-title">Ihr IT-Berater im Rems-Murr-Kreis</h2>
+        <p>Die IT-Welt entwickelt sich rasant – und viele Unternehmen kämpfen damit, den Anschluss zu halten. Genau hier setze ich an: Ich übersetze technische Komplexität in klare Handlungsempfehlungen und begleite Sie von der Idee bis zur Umsetzung.</p>
+        <p>Mein Fokus liegt auf kleinen und mittelständischen Unternehmen, die eine ehrliche, persönliche Beratung suchen – ohne Großkonzern-Bürokratie.</p>
+        <div class="about-values">
+          <div class="value-item">
+            <div class="value-dot"></div>
+            <div>
+              <strong>Ehrlichkeit vor Umsatz</strong>
+              <p>Ich empfehle nur, was wirklich zu Ihnen passt – auch wenn das manchmal bedeutet, weniger zu verkaufen.</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-dot"></div>
+            <div>
+              <strong>Verständliche Kommunikation</strong>
+              <p>Kein Technik-Kauderwelsch. Ich erkläre Lösungen so, dass Sie fundierte Entscheidungen treffen können.</p>
+            </div>
+          </div>
+          <div class="value-item">
+            <div class="value-dot"></div>
+            <div>
+              <strong>Langfristige Partnerschaft</strong>
+              <p>Ich denke nicht in Projekten, sondern in Beziehungen – als verlässlicher Ansprechpartner über Jahre.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROZESS -->
+<section id="prozess">
+  <div class="container">
+    <span class="section-label">Mein Vorgehen</span>
+    <h2 class="section-title">Wie wir zusammenarbeiten</h2>
+    <p class="section-intro">Strukturiert, transparent und auf Ihre Bedürfnisse zugeschnitten.</p>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="step-num">01</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+        </div>
+        <h3>Erstgespräch</h3>
+        <p>Kostenloses 30-minütiges Gespräch zur Analyse Ihrer Situation und Ziele.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">02</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>
+        </div>
+        <h3>Analyse & Konzept</h3>
+        <p>Detaillierte Bestandsaufnahme und Erstellung eines maßgeschneiderten Lösungskonzepts.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">03</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        </div>
+        <h3>Umsetzung</h3>
+        <p>Schrittweise Implementierung mit regelmäßigen Updates und voller Transparenz.</p>
+      </div>
+      <div class="process-step">
+        <div class="step-num">04</div>
+        <div class="step-icon">
+          <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+        </div>
+        <h3>Support & Weiterentwicklung</h3>
+        <p>Langfristige Betreuung, Dokumentation und Anpassung bei wachsenden Anforderungen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section id="kontakt">
+  <div class="container">
+    <span class="section-label">Kontakt</span>
+    <h2 class="section-title">EDV-Hilfe aus Weissach im Tal</h2>
+    <p class="section-intro">Das erste Gespräch ist kostenlos und unverbindlich. Schildern Sie mir Ihre Situation – ich melde mich innerhalb von 24 Stunden.</p>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Direkt Kontakt aufnehmen</h3>
+        <p>Ich freue mich auf Ihre Nachricht – egal ob per E-Mail, Telefon oder über das Formular.</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <div>
+              <strong>E-Mail</strong>
+              <a href="mailto:mail@it-unruh.de">mail@it-unruh.de</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            </div>
+            <div>
+              <strong>Telefon</strong>
+              <a href="tel:+4915679704023">0156 79704023</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-item-icon">
+              <svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            </div>
+            <div>
+              <strong>Standort</strong>
+              <span>Backnang, Baden-Württemberg</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <div class="success-msg" id="success-msg">
+          ✓ Vielen Dank! Ich melde mich innerhalb von 24 Stunden bei Ihnen.
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="name">Name *</label>
+            <input type="text" id="name" placeholder="Max Mustermann" required>
+          </div>
+          <div class="form-group">
+            <label for="email">E-Mail *</label>
+            <input type="email" id="email" placeholder="max@firma.de" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="firma">Unternehmen</label>
+          <input type="text" id="firma" placeholder="Musterfirma GmbH">
+        </div>
+        <div class="form-group">
+          <label for="thema">Thema *</label>
+          <select id="thema" required>
+            <option value="" disabled selected>Bitte wählen…</option>
+            <option>IT-Beratung</option>
+            <option>KI-Strategieberatung</option>
+            <option>Schulungen & Workshops</option>
+            <option>Self-Hosting-Lösungen</option>
+            <option>Sonstiges</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="nachricht">Ihre Nachricht *</label>
+          <textarea id="nachricht" placeholder="Beschreiben Sie kurz Ihre Situation oder Ihr Anliegen…" required></textarea>
+        </div>
+        <button class="form-submit" id="form-submit" onclick="handleSubmit()">Nachricht senden</button>
+        <p class="form-note">* Pflichtfelder. Ihre Daten werden nicht an Dritte weitergegeben.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <span>© 2026 Lennart Unruh · IT-Unruh · Weissach im Tal</span>
+    <div class="footer-links">
+      <a href="impressum.html">Impressum</a>
+      <a href="#">Datenschutz</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Burger Menu
+  const burger = document.getElementById('burger');
+  const menu = document.getElementById('mobile-menu');
+
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('open');
+    menu.classList.toggle('open');
+  });
+
+  // Close mobile menu when clicking a link
+  document.querySelectorAll('.mob-link, .mob-cta').forEach(link => {
+    link.addEventListener('click', () => {
+      burger.classList.remove('open');
+      menu.classList.remove('open');
+    });
+  });
+
+  // Smooth nav close on scroll
+  window.addEventListener('scroll', () => {
+    if (menu.classList.contains('open')) {
+      burger.classList.remove('open');
+      menu.classList.remove('open');
+    }
+  });
+
+  // Form submission via Formspree
+  async function handleSubmit() {
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const firma = document.getElementById('firma').value.trim();
+    const thema = document.getElementById('thema').value;
+    const nachricht = document.getElementById('nachricht').value.trim();
+
+    if (!name || !email || !thema || !nachricht) {
+      alert('Bitte füllen Sie alle Pflichtfelder aus.');
+      return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      alert('Bitte geben Sie eine gültige E-Mail-Adresse ein.');
+      return;
+    }
+
+    const btn = document.getElementById('form-submit');
+    btn.textContent = 'Wird gesendet…';
+    btn.disabled = true;
+
+    // ── FORMSPREE ──────────────────────────────────────────────────────────
+    // 1. Kostenlos registrieren auf https://formspree.io
+    // 2. Neues Formular anlegen (E-Mail: mail@it-unruh.de)
+    // 3. Die angezeigte Form-ID unten eintragen (sieht aus wie: xpwzgkla)
+    const FORMSPREE_ID = 'xrerpanw'; // <── hier eintragen
+    // ───────────────────────────────────────────────────────────────────────
+
+    if (FORMSPREE_ID === 'DEINE_FORM_ID') {
+      // Fallback solange noch keine ID eingetragen ist
+      setTimeout(() => showSuccess(btn), 600);
+      return;
+    }
+
+    try {
+      const res = await fetch('https://formspree.io/f/' + FORMSPREE_ID, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ name, email, firma, thema, nachricht })
+      });
+      if (res.ok) {
+        showSuccess(btn);
+      } else {
+        btn.textContent = 'Fehler – bitte per E-Mail kontaktieren';
+        btn.style.background = '#a32d2d';
+        btn.disabled = false;
+      }
+    } catch(e) {
+      btn.textContent = 'Fehler – bitte per E-Mail kontaktieren';
+      btn.style.background = '#a32d2d';
+      btn.disabled = false;
+    }
+  }
+
+  function showSuccess(btn) {
+    document.getElementById('success-msg').style.display = 'block';
+    btn.textContent = 'Gesendet ✓';
+    btn.style.background = '#1a6b3a';
+    ['name','email','firma','thema','nachricht'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el.tagName === 'SELECT') el.selectedIndex = 0;
+      else el.value = '';
+    });
+  }
+
+  // Animate sections on scroll
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.opacity = '1';
+        e.target.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.service-card, .process-step, .value-item').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px)';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(el);
+  });
+</script>
 </body>
 </html>

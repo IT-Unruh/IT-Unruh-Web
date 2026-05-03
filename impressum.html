@@ -1,58 +1,183 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>IT-Beratung - IT-Consulting Unruh</title>
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/subpages.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Impressum – IT-Unruh</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --navy: #0f2744;
+    --gold: #c9973a;
+    --gold-light: #e8b85a;
+    --cream: #f8f5ef;
+    --text-dark: #0f1f35;
+    --text-mid: #3a4a5c;
+    --text-light: #6a7d8f;
+    --white: #ffffff;
+    --border: rgba(15, 39, 68, 0.12);
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'Source Sans 3', system-ui, sans-serif;
+    --radius-md: 8px;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font-body);
+    color: var(--text-dark);
+    background: var(--cream);
+    line-height: 1.75;
+    font-size: 17px;
+  }
+
+  nav {
+    background: rgba(15, 39, 68, 0.97);
+    border-bottom: 1px solid rgba(201, 151, 58, 0.25);
+  }
+  .nav-inner {
+    max-width: 1140px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 2rem; height: 68px;
+  }
+  .nav-logo {
+    font-family: var(--font-display); font-size: 1.45rem; font-weight: 700;
+    color: white; text-decoration: none;
+  }
+  .nav-logo span { color: var(--gold); }
+  .nav-back {
+    color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem;
+    display: flex; align-items: center; gap: 0.4rem;
+    transition: color 0.2s;
+  }
+  .nav-back:hover { color: var(--gold-light); }
+
+  .page-header {
+    background: var(--navy); padding: 4rem 2rem 3rem;
+  }
+  .page-header-inner { max-width: 760px; margin: 0 auto; }
+  .page-header h1 {
+    font-family: var(--font-display); font-size: 2.4rem; font-weight: 700;
+    color: white; margin-bottom: 0.5rem;
+  }
+  .page-header p { color: rgba(255,255,255,0.55); font-size: 0.9rem; }
+
+  main { max-width: 760px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+
+  .imprint-block {
+    background: var(--white); border: 1px solid var(--border);
+    border-radius: var(--radius-md); padding: 2rem 2.25rem;
+    margin-bottom: 1.5rem;
+  }
+  .imprint-block h2 {
+    font-family: var(--font-display); font-size: 1.15rem; font-weight: 600;
+    color: var(--navy); margin-bottom: 1.1rem;
+    padding-bottom: 0.75rem; border-bottom: 2px solid var(--gold);
+    display: inline-block;
+  }
+  .imprint-block p, .imprint-block address {
+    color: var(--text-mid); font-style: normal;
+    font-size: 0.97rem; line-height: 1.8;
+  }
+  .imprint-block a { color: var(--navy); }
+  .imprint-block a:hover { color: var(--gold); }
+
+  .notice {
+    background: rgba(201,151,58,0.08); border-left: 3px solid var(--gold);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    padding: 1rem 1.25rem; margin-top: 1rem;
+    color: var(--text-mid); font-size: 0.88rem; line-height: 1.65;
+  }
+
+  footer {
+    background: var(--text-dark); color: rgba(255,255,255,0.45);
+    padding: 2rem; font-size: 0.85rem; text-align: center;
+  }
+  footer a { color: rgba(255,255,255,0.45); text-decoration: none; }
+  footer a:hover { color: var(--gold-light); }
+</style>
 </head>
 <body>
-    <!-- Header / Navigation -->
-    <header class="subpage-header">
-        <div class="container">
-            <nav>
-                <div class="logo">
-                    <h1><a href="index.html">IT-Consulting Unruh</a></h1>
-                </div>
-                <div class="nav-links">
-                    <a href="index.html">Home</a>
-                    <a href="index.html#about">Über uns</a>
-                    <a href="index.html#services">Leistungen</a>
-                    <a href="index.html#contact">Kontakt</a>
-                </div>
-                <div class="menu-toggle">
-                    <i class="fas fa-bars"></i>
-                </div>
-            </nav>
-        </div>
-    </header>
 
-    <!-- Service Detail Section -->
-    <section class="service-detail-section">
-        <div class="container">
-            <h1>Impressum</h1>
-            <p>Lennart Unruh <br>Hügelstrasse 16<br>71554 Weissach im Tal</p>
-        </div>
-    </section>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">IT-<span>Unruh</span></a>
+    <a href="index.html" class="nav-back">← Zurück zur Startseite</a>
+  </div>
+</nav>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-links">
-                    <a href="impressum.html">Impressum</a>
-                </div>
-                <div class="footer-copyright">
-                    <p>&copy; 2025 IT-Consulting Unruh. Alle Rechte vorbehalten.</p>
-                    <p class="made-with">Made with <i class="fas fa-heart"></i> & <i class="fas fa-brain"></i> in Deutschland</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+<div class="page-header">
+  <div class="page-header-inner">
+    <h1>Impressum</h1>
+    <p>Angaben gemäß § 5 TMG</p>
+  </div>
+</div>
 
-    <script src="js/script.js"></script>
+<main>
+
+  <div class="imprint-block">
+    <h2>Verantwortlich</h2>
+    <address>
+      <strong>Lennart Unruh</strong><br>
+      Hügelstraße 16<br>
+      71554 Weissach im Tal<br>
+      Deutschland
+    </address>
+  </div>
+
+  <div class="imprint-block">
+    <h2>Kontakt</h2>
+    <p>
+      Telefon: <a href="tel:+4915679704023">0156 79704023</a><br>
+      E-Mail: <a href="mailto:mail@it-unruh.de">mail@it-unruh.de</a>
+    </p>
+  </div>
+
+  <div class="imprint-block">
+    <h2>Umsatzsteuer-ID</h2>
+    <p>
+      Sofern eine Umsatzsteuer-Identifikationsnummer vorhanden, bitte hier eintragen gemäß § 27a UStG.<br>
+      <em style="color: var(--text-light); font-size: 0.88rem;">→ Falls du keine USt-ID hast (Kleinunternehmerregelung § 19 UStG), diesen Abschnitt entfernen.</em>
+    </p>
+  </div>
+
+  <div class="imprint-block">
+    <h2>Berufsbezeichnung & Aufsichtsbehörde</h2>
+    <p>
+      Berufsbezeichnung: IT-Berater<br>
+      Zuständige Aufsichtsbehörde: Gewerbeamt Weissach im Tal
+    </p>
+  </div>
+
+  <div class="imprint-block">
+    <h2>Haftung für Inhalte</h2>
+    <p>Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
+    <p style="margin-top:0.75rem;">Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.</p>
+  </div>
+
+  <div class="imprint-block">
+    <h2>Haftung für Links</h2>
+    <p>Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.</p>
+    <div class="notice">Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar.</div>
+  </div>
+
+  <div class="imprint-block">
+    <h2>Urheberrecht</h2>
+    <p>Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.</p>
+  </div>
+
+  <div class="imprint-block">
+    <h2>Streitschlichtung</h2>
+    <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr</a>.</p>
+    <p style="margin-top:0.75rem;">Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+  </div>
+
+</main>
+
+<footer>
+  <p>© 2025 Lennart Unruh · IT-Unruh · <a href="index.html">Startseite</a></p>
+</footer>
+
 </body>
 </html>
