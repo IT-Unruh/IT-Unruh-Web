@@ -9,6 +9,9 @@
 <meta name="author" content="Lennart Unruh – IT-Unruh">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://www.it-unruh.de/">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
 <!-- Open Graph für Google & Social -->
 <meta property="og:title" content="IT-Beratung & EDV-Support für Kleinunternehmen | IT-Unruh Bonn-Beuel">
 <meta property="og:description" content="Persönliche IT-Beratung, EDV-Support und IT-Sicherheit für Handwerker, Einzelhändler und Dienstleister in Bonn-Beuel, Bonn & Weissach im Tal. Kein Fachjargon, faire Preise.">
@@ -534,6 +537,7 @@
       <li><a href="#leistungen">Leistungen</a></li>
       <li><a href="#ueber-mich">Über mich</a></li>
       <li><a href="#prozess">Vorgehen</a></li>
+      <li><a href="#referenzen">Referenzen</a></li>
       <li><a href="#kontakt" class="nav-cta">Kontakt aufnehmen</a></li>
     </ul>
     <button class="burger" id="burger" aria-label="Menü öffnen">
@@ -564,11 +568,11 @@
     <div class="hero-card">
       <div class="hero-stats">
         <div class="stat-item">
-          <div class="stat-num">10+</div>
+          <div class="stat-num">5+</div>
           <div class="stat-label">Jahre Erfahrung</div>
         </div>
         <div class="stat-item">
-          <div class="stat-num">50+</div>
+          <div class="stat-num">20+</div>
           <div class="stat-label">Projekte</div>
         </div>
         <div class="stat-item">
@@ -885,6 +889,127 @@
         <h3>Support & Weiterentwicklung</h3>
         <p>Langfristige Betreuung, Dokumentation und Anpassung bei wachsenden Anforderungen.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- REFERENZEN -->
+<style>
+  #referenzen { background: var(--cream); }
+  .ref-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+  .ref-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.75rem 1.75rem 1.5rem;
+    display: flex; flex-direction: column; gap: 1rem;
+    transition: box-shadow 0.25s, transform 0.25s;
+  }
+  .ref-card:hover { box-shadow: 0 6px 24px rgba(15,39,68,0.10); transform: translateY(-3px); }
+  .ref-card-header { display: flex; align-items: flex-start; gap: 1rem; }
+  .ref-icon {
+    width: 44px; height: 44px; border-radius: 10px;
+    background: var(--navy); display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .ref-icon svg { width: 22px; height: 22px; stroke: var(--gold); fill: none; stroke-width: 1.5; }
+  .ref-client { flex: 1; }
+  .ref-client strong { display: block; color: var(--text-dark); font-size: 1rem; font-weight: 600; line-height: 1.3; }
+  .ref-client span { color: var(--text-light); font-size: 0.82rem; }
+  .ref-desc { color: var(--text-mid); font-size: 0.93rem; line-height: 1.7; flex: 1; }
+  .ref-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .ref-tag {
+    background: rgba(15,39,68,0.06); color: var(--navy);
+    font-size: 0.75rem; font-weight: 600; letter-spacing: 0.02em;
+    padding: 0.2rem 0.6rem; border-radius: 20px;
+  }
+</style>
+<section id="referenzen">
+  <div class="container">
+    <span class="section-label">Referenzen</span>
+    <h2 class="section-title">Projekte, die für sich sprechen</h2>
+    <p class="section-intro">Ausgewählte Kundenprojekte – von der Telefonanlage bis zur Cloud-Migration.</p>
+    <div class="ref-grid">
+
+      <div class="ref-card">
+        <div class="ref-card-header">
+          <div class="ref-icon">
+            <svg viewBox="0 0 24 24"><path d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/></svg>
+          </div>
+          <div class="ref-client">
+            <strong>Baufinanzierung 4.0</strong>
+            <span>Ludwigsburg</span>
+          </div>
+        </div>
+        <p class="ref-desc">Migration der gesamten Dateiablage von einem lokalen NAS-System in die Microsoft Cloud – inklusive Druckerintegration, Einrichtung aller Arbeitsplätze und Schulung der Mitarbeiter.</p>
+        <div class="ref-tags">
+          <span class="ref-tag">Microsoft 365</span>
+          <span class="ref-tag">SharePoint</span>
+          <span class="ref-tag">Cloud-Migration</span>
+          <span class="ref-tag">Arbeitsplatz-Setup</span>
+        </div>
+      </div>
+
+      <div class="ref-card">
+        <div class="ref-card-header">
+          <div class="ref-icon">
+            <svg viewBox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          </div>
+          <div class="ref-client">
+            <strong>Supermarkt Damasco</strong>
+            <span>Fellbach</span>
+          </div>
+        </div>
+        <p class="ref-desc">Einrichtung einer modernen VoIP-Telefonanlage für den laufenden Supermarktbetrieb – von der Konzeption bis zur Inbetriebnahme inklusive aller Nebenstellen.</p>
+        <div class="ref-tags">
+          <span class="ref-tag">Placetel</span>
+          <span class="ref-tag">VoIP</span>
+          <span class="ref-tag">Telefonanlage</span>
+        </div>
+      </div>
+
+      <div class="ref-card">
+        <div class="ref-card-header">
+          <div class="ref-icon">
+            <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <div class="ref-client">
+            <strong>Kirsch & Kirsch Immobilien</strong>
+            <span>Potsdam</span>
+          </div>
+        </div>
+        <p class="ref-desc">Implementierung einer vollintegrierten Kommunikationslösung: VoIP-Telefonanlage mit direkter Anbindung an das Maklersystem Propstack und automatisierter Anruferfassung via Phonemondo.</p>
+        <div class="ref-tags">
+          <span class="ref-tag">Placetel</span>
+          <span class="ref-tag">Propstack</span>
+          <span class="ref-tag">Phonemondo</span>
+          <span class="ref-tag">CRM-Integration</span>
+        </div>
+      </div>
+
+      <div class="ref-card">
+        <div class="ref-card-header">
+          <div class="ref-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"/></svg>
+          </div>
+          <div class="ref-client">
+            <strong>AWO Murrhardt</strong>
+            <span>Murrhardt</span>
+          </div>
+        </div>
+        <p class="ref-desc">Automatisierung eines bisher manuellen Abrechnungsprozesses – deutliche Reduktion des administrativen Aufwands und Fehlerquellen durch strukturierte Prozessdigitalisierung.</p>
+        <div class="ref-tags">
+          <span class="ref-tag">Prozessautomatisierung</span>
+          <span class="ref-tag">Rechnungsabwicklung</span>
+          <span class="ref-tag">Digitalisierung</span>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
